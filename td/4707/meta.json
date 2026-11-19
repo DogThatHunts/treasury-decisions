@@ -1,0 +1,18 @@
+{
+  "number": "4707",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/4707/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/4707/TD-4707.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/4707/td_4707.md",
+  "sources": [
+    {
+      "label": "HathiTrust (Internal Revenue Bulletin 1936, seq 1717)",
+      "url": "https://babel.hathitrust.org/cgi/pt?id=uiug.30112102075568&seq=1717"
+    }
+  ],
+  "note": "Liquor Tax Administration Act -- warehouse ventilation. Real and verified, but not actually cited anywhere in the Dave Champion corpus; row 1253's citation moved to T.D. 4704 (2026-11-16) once the SS-5 quote was traced to its real source.",
+  "relations": {},
+  "cited_in_queue_rows": [],
+  "scan": "own",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_4707/ (TD 4707.pdf)",
+  "imported_on": "2026-11-19"
+}

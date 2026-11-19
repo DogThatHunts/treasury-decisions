@@ -1,0 +1,24 @@
+{
+  "number": "2402",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/2402/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2401/TD-2401.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/2402/td_2402.md",
+  "sources": [
+    {
+      "label": "HathiTrust full-text search",
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2402%22;a=srchls;lmt=ft"
+    }
+  ],
+  "note": "",
+  "relations": {
+    "amends": [
+      "2313"
+    ]
+  },
+  "cited_in_queue_rows": [
+    "5612"
+  ],
+  "scan": "bundled with 2401",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2402/ (../td_2401/TD 2401, TD 2402.pdf)",
+  "imported_on": "2026-11-19"
+}

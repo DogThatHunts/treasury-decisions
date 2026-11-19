@@ -1,0 +1,26 @@
+{
+  "number": "2313",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/2313/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2313/TD-2313.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/2313/td_2313.md",
+  "sources": [
+    {
+      "label": "HathiTrust full-text search",
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft"
+    }
+  ],
+  "note": "",
+  "relations": {
+    "amended_by": [
+      "2402"
+    ]
+  },
+  "cited_in_queue_rows": [
+    "1217",
+    "5602",
+    "5612"
+  ],
+  "scan": "own",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2313/ (TD 2313.pdf)",
+  "imported_on": "2026-11-19"
+}

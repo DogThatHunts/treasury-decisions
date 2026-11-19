@@ -1,0 +1,20 @@
+{
+  "number": "2190",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/2190/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2190/TD-2190.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/2190/td_2190.md",
+  "sources": [
+    {
+      "label": "HathiTrust (Vol. 17, seq 490)",
+      "url": "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=490"
+    }
+  ],
+  "note": "",
+  "relations": {},
+  "cited_in_queue_rows": [
+    "5612"
+  ],
+  "scan": "own",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2190/ (TD 2190.pdf)",
+  "imported_on": "2026-11-19"
+}

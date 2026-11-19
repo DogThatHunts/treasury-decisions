@@ -1,0 +1,20 @@
+{
+  "number": "4704",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/4704/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/4704/TD-4704.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/4704/td_4704.md",
+  "sources": [
+    {
+      "label": "HathiTrust (Internal Revenue Bulletin 1936, seq 1640)",
+      "url": "https://babel.hathitrust.org/cgi/pt?id=uiug.30112102075568&seq=1640"
+    }
+  ],
+  "note": "Identification of taxpayers under Title VIII of the Social Security Act -- the real source of row 1253's SS-5 quote, hand-corrected 2026-11-16 from a misattribution to T.D. 4707.",
+  "relations": {},
+  "cited_in_queue_rows": [
+    "1253"
+  ],
+  "scan": "own",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_4704/ (TD 4704.pdf)",
+  "imported_on": "2026-11-19"
+}

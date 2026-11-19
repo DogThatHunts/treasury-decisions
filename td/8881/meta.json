@@ -1,0 +1,26 @@
+{
+  "number": "8881",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/8881/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/8881/TD-8881.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/8881/td_8881.md",
+  "sources": [
+    {
+      "label": "Federal Register (65 FR 32152)",
+      "url": "https://www.federalregister.gov/documents/2000/05/22/00-11937/revisions-to-regulations-relating-to-withholding-of-tax-on-certain-us-source-income-paid-to-foreign"
+    }
+  ],
+  "note": "",
+  "relations": {},
+  "cited_in_queue_rows": [
+    "1234",
+    "1239",
+    "1243",
+    "1247",
+    "1249",
+    "1254",
+    "5600"
+  ],
+  "scan": "own",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_8881/ (T.D. 8881.pdf)",
+  "imported_on": "2026-11-19"
+}

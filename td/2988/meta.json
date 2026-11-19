@@ -1,0 +1,21 @@
+{
+  "number": "2988",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/2988/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2988/TD-2988.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/2988/td_2988.md",
+  "sources": [
+    {
+      "label": "HathiTrust full-text search",
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft"
+    }
+  ],
+  "note": "",
+  "relations": {},
+  "cited_in_queue_rows": [
+    "1217",
+    "5612"
+  ],
+  "scan": "own",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2988/ (TD 2988.pdf)",
+  "imported_on": "2026-11-19"
+}

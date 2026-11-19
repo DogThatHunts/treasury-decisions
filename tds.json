@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "generated": "2026-11-19",
+  "count": 17,
+  "tds": {
+    "1928": {
+      "number": "1928",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/1928/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/1928/TD-1928.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/1928/td_1928.md",
+      "sources": [
+        {
+          "label": "HathiTrust full-text search",
+          "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+1928%22;a=srchls;lmt=ft"
+        }
+      ],
+      "note": "",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "1217",
+        "1226",
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_1928/ (TD 1928.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "1953": {
+      "number": "1953",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/1953/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/1953/TD-1953.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/1953/td_1953.md",
+      "sources": [
+        {
+          "label": "HathiTrust (Vol. 16, seq 46)",
+          "url": "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=46"
+        }
+      ],
+      "note": "",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_1953/ (TD 1953.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2013": {
+      "number": "2013",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2013/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2013/TD-2013.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2013/td_2013.md",
+      "sources": [
+        {
+          "label": "HathiTrust (Vol. 16, seq 130)",
+          "url": "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=130"
+        }
+      ],
+      "note": "",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2013/ (TD 2013.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2090": {
+      "number": "2090",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2090/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2090/TD-2090.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2090/td_2090.md",
+      "sources": [
+        {
+          "label": "HathiTrust (Vol. 16, seq 271)",
+          "url": "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=271"
+        }
+      ],
+      "note": "24-page A-Z digest (full synopsis of 1913-income-tax rulings), not a single short decision like the others here. Pages 1-17 carry Google's original OCR text; pages 18-24 were tesseract-OCR'd 2026-11-16 (no text layer on the source scan) and merged back in.",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "1247"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2090/ (TD 2090.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2109": {
+      "number": "2109",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2109/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2109/TD-2109.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2109/td_2109.md",
+      "sources": [
+        {
+          "label": "HathiTrust (Vol. 16, seq 317)",
+          "url": "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=317"
+        }
+      ],
+      "note": "",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "1217"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2109/ (TD 2109.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2190": {
+      "number": "2190",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2190/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2190/TD-2190.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2190/td_2190.md",
+      "sources": [
+        {
+          "label": "HathiTrust (Vol. 17, seq 490)",
+          "url": "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=490"
+        }
+      ],
+      "note": "",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2190/ (TD 2190.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2313": {
+      "number": "2313",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2313/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2313/TD-2313.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2313/td_2313.md",
+      "sources": [
+        {
+          "label": "HathiTrust full-text search",
+          "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2313%22;a=srchls;lmt=ft"
+        }
+      ],
+      "note": "",
+      "relations": {
+        "amended_by": [
+          "2402"
+        ]
+      },
+      "cited_in_queue_rows": [
+        "1217",
+        "5602",
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2313/ (TD 2313.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2382": {
+      "number": "2382",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2382/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2382/TD-2382.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2382/td_2382.md",
+      "sources": [
+        {
+          "label": "HathiTrust full-text search",
+          "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2382%22;a=srchls;lmt=ft"
+        }
+      ],
+      "note": "",
+      "relations": {
+        "superseded_by": [
+          "2401"
+        ]
+      },
+      "cited_in_queue_rows": [],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2382/ (TD 2382.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2401": {
+      "number": "2401",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2401/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2401/TD-2401.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2401/td_2401.md",
+      "sources": [
+        {
+          "label": "HathiTrust full-text search",
+          "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2401%22;a=srchls;lmt=ft"
+        }
+      ],
+      "note": "",
+      "relations": {
+        "supersedes": [
+          "2382"
+        ]
+      },
+      "cited_in_queue_rows": [
+        "1217",
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2401/ (TD 2401, TD 2402.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2402": {
+      "number": "2402",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2402/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2401/TD-2401.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2402/td_2402.md",
+      "sources": [
+        {
+          "label": "HathiTrust full-text search",
+          "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2402%22;a=srchls;lmt=ft"
+        }
+      ],
+      "note": "",
+      "relations": {
+        "amends": [
+          "2313"
+        ]
+      },
+      "cited_in_queue_rows": [
+        "5612"
+      ],
+      "scan": "bundled with 2401",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2402/ (../td_2401/TD 2401, TD 2402.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2815": {
+      "number": "2815",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2815/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2815/TD-2815.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2815/td_2815.md",
+      "sources": [
+        {
+          "label": "HathiTrust full-text search",
+          "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft"
+        }
+      ],
+      "note": "The 2-page scan also carries the next decision, T.D. 2816; this file is sliced to the T.D. 2815 section. (The earlier 'may actually be 2816' caveat is resolved — the scan's own header reads (T.D. 2815.).)",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "1217",
+        "1247",
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2815/ (TD 2815 - Form 1040 for nonresident aliens and their agents.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "2988": {
+      "number": "2988",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/2988/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2988/TD-2988.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/2988/td_2988.md",
+      "sources": [
+        {
+          "label": "HathiTrust full-text search",
+          "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2988%22;a=srchls;lmt=ft"
+        }
+      ],
+      "note": "",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "1217",
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2988/ (TD 2988.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "4704": {
+      "number": "4704",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/4704/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/4704/TD-4704.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/4704/td_4704.md",
+      "sources": [
+        {
+          "label": "HathiTrust (Internal Revenue Bulletin 1936, seq 1640)",
+          "url": "https://babel.hathitrust.org/cgi/pt?id=uiug.30112102075568&seq=1640"
+        }
+      ],
+      "note": "Identification of taxpayers under Title VIII of the Social Security Act -- the real source of row 1253's SS-5 quote, hand-corrected 2026-11-16 from a misattribution to T.D. 4707.",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "1253"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_4704/ (TD 4704.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "4707": {
+      "number": "4707",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/4707/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/4707/TD-4707.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/4707/td_4707.md",
+      "sources": [
+        {
+          "label": "HathiTrust (Internal Revenue Bulletin 1936, seq 1717)",
+          "url": "https://babel.hathitrust.org/cgi/pt?id=uiug.30112102075568&seq=1717"
+        }
+      ],
+      "note": "Liquor Tax Administration Act -- warehouse ventilation. Real and verified, but not actually cited anywhere in the Dave Champion corpus; row 1253's citation moved to T.D. 4704 (2026-11-16) once the SS-5 quote was traced to its real source.",
+      "relations": {},
+      "cited_in_queue_rows": [],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_4707/ (TD 4707.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "6500": {
+      "number": "6500",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/6500/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/6500/TD-6500.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/6500/td_6500.md",
+      "sources": [
+        {
+          "label": "HathiTrust full-text search",
+          "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+6500%22;a=srchls;lmt=ft"
+        }
+      ],
+      "note": "",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "1217",
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_6500/ (TD 6500.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "8734": {
+      "number": "8734",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/8734/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/8734/TD-8734.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/8734/td_8734.md",
+      "sources": [
+        {
+          "label": "IRS (authoritative full text)",
+          "url": "https://www.irs.gov/pub/irs-regs/td8734.txt"
+        }
+      ],
+      "note": "",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "1217",
+        "1234",
+        "1239",
+        "1247",
+        "1249",
+        "1254",
+        "5598",
+        "5610",
+        "5612"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_8734/ (T.D. 8734-Cumulative Bulletin 1997-44.pdf)",
+      "imported_on": "2026-11-19"
+    },
+    "8881": {
+      "number": "8881",
+      "page": "https://dogthathunts.github.io/treasury-decisions/td/8881/",
+      "pdf": "https://dogthathunts.github.io/treasury-decisions/td/8881/TD-8881.pdf",
+      "text": "https://dogthathunts.github.io/treasury-decisions/td/8881/td_8881.md",
+      "sources": [
+        {
+          "label": "Federal Register (65 FR 32152)",
+          "url": "https://www.federalregister.gov/documents/2000/05/22/00-11937/revisions-to-regulations-relating-to-withholding-of-tax-on-certain-us-source-income-paid-to-foreign"
+        }
+      ],
+      "note": "",
+      "relations": {},
+      "cited_in_queue_rows": [
+        "1234",
+        "1239",
+        "1243",
+        "1247",
+        "1249",
+        "1254",
+        "5600"
+      ],
+      "scan": "own",
+      "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_8881/ (T.D. 8881.pdf)",
+      "imported_on": "2026-11-19"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "number": "8734",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/8734/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/8734/TD-8734.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/8734/td_8734.md",
+  "sources": [
+    {
+      "label": "IRS (authoritative full text)",
+      "url": "https://www.irs.gov/pub/irs-regs/td8734.txt"
+    }
+  ],
+  "note": "",
+  "relations": {},
+  "cited_in_queue_rows": [
+    "1217",
+    "1234",
+    "1239",
+    "1247",
+    "1249",
+    "1254",
+    "5598",
+    "5610",
+    "5612"
+  ],
+  "scan": "own",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_8734/ (T.D. 8734-Cumulative Bulletin 1997-44.pdf)",
+  "imported_on": "2026-11-19"
+}

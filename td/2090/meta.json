@@ -1,0 +1,20 @@
+{
+  "number": "2090",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/2090/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2090/TD-2090.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/2090/td_2090.md",
+  "sources": [
+    {
+      "label": "HathiTrust (Vol. 16, seq 271)",
+      "url": "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=271"
+    }
+  ],
+  "note": "24-page A-Z digest (full synopsis of 1913-income-tax rulings), not a single short decision like the others here. Pages 1-17 carry Google's original OCR text; pages 18-24 were tesseract-OCR'd 2026-11-16 (no text layer on the source scan) and merged back in.",
+  "relations": {},
+  "cited_in_queue_rows": [
+    "1247"
+  ],
+  "scan": "own",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2090/ (TD 2090.pdf)",
+  "imported_on": "2026-11-19"
+}

@@ -1,0 +1,22 @@
+{
+  "number": "2815",
+  "page": "https://dogthathunts.github.io/treasury-decisions/td/2815/",
+  "pdf": "https://dogthathunts.github.io/treasury-decisions/td/2815/TD-2815.pdf",
+  "text": "https://dogthathunts.github.io/treasury-decisions/td/2815/td_2815.md",
+  "sources": [
+    {
+      "label": "HathiTrust full-text search",
+      "url": "https://babel.hathitrust.org/cgi/ls?q1=%22Treasury+Decision+2815%22;a=srchls;lmt=ft"
+    }
+  ],
+  "note": "The 2-page scan also carries the next decision, T.D. 2816; this file is sliced to the T.D. 2815 section. (The earlier 'may actually be 2816' caveat is resolved — the scan's own header reads (T.D. 2815.).)",
+  "relations": {},
+  "cited_in_queue_rows": [
+    "1217",
+    "1247",
+    "5612"
+  ],
+  "scan": "own",
+  "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2815/ (TD 2815 - Form 1040 for nonresident aliens and their agents.pdf)",
+  "imported_on": "2026-11-19"
+}
