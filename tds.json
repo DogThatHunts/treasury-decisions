@@ -15,7 +15,6 @@
         }
       ],
       "note": "",
-      "relations": {},
       "cited_in_queue_rows": [
         "1217",
         "1226",
@@ -23,7 +22,8 @@
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_1928/ (TD 1928.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "1953": {
       "number": "1953",
@@ -37,13 +37,13 @@
         }
       ],
       "note": "",
-      "relations": {},
       "cited_in_queue_rows": [
         "5612"
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_1953/ (TD 1953.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "2013": {
       "number": "2013",
@@ -57,13 +57,13 @@
         }
       ],
       "note": "",
-      "relations": {},
       "cited_in_queue_rows": [
         "5612"
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2013/ (TD 2013.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "2090": {
       "number": "2090",
@@ -77,13 +77,13 @@
         }
       ],
       "note": "24-page A-Z digest (full synopsis of 1913-income-tax rulings), not a single short decision like the others here. Pages 1-17 carry Google's original OCR text; pages 18-24 were tesseract-OCR'd 2026-11-16 (no text layer on the source scan) and merged back in.",
-      "relations": {},
       "cited_in_queue_rows": [
         "1247"
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2090/ (TD 2090.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "2109": {
       "number": "2109",
@@ -97,13 +97,13 @@
         }
       ],
       "note": "",
-      "relations": {},
       "cited_in_queue_rows": [
         "1217"
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2109/ (TD 2109.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "2190": {
       "number": "2190",
@@ -117,13 +117,13 @@
         }
       ],
       "note": "",
-      "relations": {},
       "cited_in_queue_rows": [
         "5612"
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2190/ (TD 2190.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "2313": {
       "number": "2313",
@@ -137,11 +137,6 @@
         }
       ],
       "note": "",
-      "relations": {
-        "amended_by": [
-          "2402"
-        ]
-      },
       "cited_in_queue_rows": [
         "1217",
         "5602",
@@ -149,7 +144,14 @@
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2313/ (TD 2313.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": [
+        {
+          "verb": "amended by",
+          "to": "2402",
+          "basis": "Amending T.D. 2313 of March 21, 1916"
+        }
+      ]
     },
     "2382": {
       "number": "2382",
@@ -163,15 +165,17 @@
         }
       ],
       "note": "",
-      "relations": {
-        "superseded_by": [
-          "2401"
-        ]
-      },
       "cited_in_queue_rows": [],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2382/ (TD 2382.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": [
+        {
+          "verb": "superseded by",
+          "to": "2401",
+          "basis": "Revision of T.D. 2382 of October 19, 1916"
+        }
+      ]
     },
     "2401": {
       "number": "2401",
@@ -185,18 +189,20 @@
         }
       ],
       "note": "",
-      "relations": {
-        "supersedes": [
-          "2382"
-        ]
-      },
       "cited_in_queue_rows": [
         "1217",
         "5612"
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2401/ (TD 2401, TD 2402.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": [
+        {
+          "verb": "supersedes",
+          "to": "2382",
+          "basis": "Revision of T.D. 2382 of October 19, 1916"
+        }
+      ]
     },
     "2402": {
       "number": "2402",
@@ -210,17 +216,19 @@
         }
       ],
       "note": "",
-      "relations": {
-        "amends": [
-          "2313"
-        ]
-      },
       "cited_in_queue_rows": [
         "5612"
       ],
       "scan": "bundled with 2401",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2402/ (../td_2401/TD 2401, TD 2402.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": [
+        {
+          "verb": "amends",
+          "to": "2313",
+          "basis": "Amending T.D. 2313 of March 21, 1916"
+        }
+      ]
     },
     "2815": {
       "number": "2815",
@@ -234,7 +242,6 @@
         }
       ],
       "note": "The 2-page scan also carries the next decision, T.D. 2816; this file is sliced to the T.D. 2815 section. (The earlier 'may actually be 2816' caveat is resolved — the scan's own header reads (T.D. 2815.).)",
-      "relations": {},
       "cited_in_queue_rows": [
         "1217",
         "1247",
@@ -242,7 +249,8 @@
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2815/ (TD 2815 - Form 1040 for nonresident aliens and their agents.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "2988": {
       "number": "2988",
@@ -256,14 +264,14 @@
         }
       ],
       "note": "",
-      "relations": {},
       "cited_in_queue_rows": [
         "1217",
         "5612"
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_2988/ (TD 2988.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "4704": {
       "number": "4704",
@@ -277,13 +285,13 @@
         }
       ],
       "note": "Identification of taxpayers under Title VIII of the Social Security Act -- the real source of row 1253's SS-5 quote, hand-corrected 2026-11-16 from a misattribution to T.D. 4707.",
-      "relations": {},
       "cited_in_queue_rows": [
         "1253"
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_4704/ (TD 4704.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "4707": {
       "number": "4707",
@@ -297,11 +305,11 @@
         }
       ],
       "note": "Liquor Tax Administration Act -- warehouse ventilation. Real and verified, but not actually cited anywhere in the Dave Champion corpus; row 1253's citation moved to T.D. 4704 (2026-11-16) once the SS-5 quote was traced to its real source.",
-      "relations": {},
       "cited_in_queue_rows": [],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_4707/ (TD 4707.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "6500": {
       "number": "6500",
@@ -315,14 +323,14 @@
         }
       ],
       "note": "",
-      "relations": {},
       "cited_in_queue_rows": [
         "1217",
         "5612"
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_6500/ (TD 6500.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "8734": {
       "number": "8734",
@@ -336,7 +344,6 @@
         }
       ],
       "note": "",
-      "relations": {},
       "cited_in_queue_rows": [
         "1217",
         "1234",
@@ -350,7 +357,8 @@
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_8734/ (T.D. 8734-Cumulative Bulletin 1997-44.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     },
     "8881": {
       "number": "8881",
@@ -364,7 +372,6 @@
         }
       ],
       "note": "",
-      "relations": {},
       "cited_in_queue_rows": [
         "1234",
         "1239",
@@ -376,7 +383,8 @@
       ],
       "scan": "own",
       "imported_from": "DogThatHunts/dave_champion citations/treasury_decisions/td_8881/ (T.D. 8881.pdf)",
-      "imported_on": "2026-11-19"
+      "imported_on": "2026-11-19",
+      "relations": []
     }
   }
 }

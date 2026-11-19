@@ -8,11 +8,18 @@ Treasury Decision linker, the dave_champion book builds). Run after adding or ed
 """
 import html
 import json
+import sys
 from datetime import date
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from td_relations import load_relations  # noqa: E402  (tools/td_relations.json is the curated source)
+
 ROOT = Path(__file__).resolve().parent.parent
 REQUIRED = ("number", "page", "pdf", "text", "sources")
+
+
+RELATIONS = load_relations()
 
 
 def load():
@@ -26,16 +33,13 @@ def load():
             raise SystemExit(f"{f}: number {m['number']!r} does not match folder {f.parent.name!r}")
         if not (f.parent / "index.html").exists():
             raise SystemExit(f"{f.parent}: no index.html")
+        m["relations"] = RELATIONS.get(m["number"], [])   # [{verb, to, basis}], both directions
         tds.append(m)
     return tds
 
 
 def rel_text(m):
-    words = {"amends": "amends", "amended_by": "amended by", "supersedes": "supersedes",
-             "superseded_by": "superseded by"}
-    parts = [f"{words[k]} " + ", ".join(f'<a href="td/{o}/">T.D. {o}</a>' for o in v)
-             for k, v in m.get("relations", {}).items()]
-    return "; ".join(parts)
+    return "; ".join(f'{r["verb"]} <a href="td/{r["to"]}/">T.D. {r["to"]}</a>' for r in m.get("relations", []))
 
 
 def build_html(tds):
