@@ -20,7 +20,23 @@ import sys
 
 TD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "td")
 BASE = "https://dogthathunts.github.io/treasury-decisions"
-PAGE_RE = re.compile(r"^<!--\s*page:\s*(\d+)\s*-->$")
+PAGE_RE = re.compile(r"^<!--\s*page:\s*(\d+)(?:\s+printed:\s*(\S+?))?\s*-->$")
+INLINE_PAGE_RE = re.compile(r"\s*<!--\s*page:\s*(\d+)(?:\s+printed:\s*(\S+?))?\s*-->\s*")
+
+
+def page_label(n, printed):
+    return f"page {n}" + (f" · printed p. {html.escape(printed)}" if printed else "")
+
+
+def inline_para(text):
+    """A paragraph line; a page marker inside it (the paragraph crosses a page break) becomes an inline marker
+    with the same #p-N anchor."""
+    parts = INLINE_PAGE_RE.split(text)
+    out = inline(parts[0])
+    for k in range(1, len(parts), 3):
+        n, printed, rest = parts[k], parts[k + 1], parts[k + 2]
+        out += f' <span class="page-inline" id="p-{n}">{page_label(n, printed)}</span> ' + inline(rest)
+    return out
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 
 
@@ -55,8 +71,8 @@ def render(md):
             out.append('<hr>')
             i += 1
         elif PAGE_RE.match(ln.strip()):
-            n = PAGE_RE.match(ln.strip()).group(1)
-            out.append(f'<div class="page" id="p-{n}">page {n}</div>')
+            m = PAGE_RE.match(ln.strip())
+            out.append(f'<div class="page" id="p-{m.group(1)}">{page_label(m.group(1), m.group(2))}</div>')
             i += 1
         elif ln.strip() == "":
             i += 1
@@ -66,7 +82,7 @@ def render(md):
                     and lines[i].strip() != "---" and not PAGE_RE.match(lines[i].strip()):
                 para.append(lines[i])
                 i += 1
-            body = "<br>".join(inline(p) for p in para)
+            body = "<br>".join(inline_para(p) for p in para)
             out.append(f"<p>{body}</p>")
     return title, "\n".join(out)
 
@@ -87,6 +103,9 @@ hr{border:0;border-top:1px solid var(--rule);margin:1.4rem 0}
       letter-spacing:.08em;color:var(--muted);border-top:1px dotted var(--rule);
       padding-top:.5rem;margin:1.6rem 0 .6rem;scroll-margin-top:1rem}
 p{margin:0 0 1rem;max-width:40rem}
+.page-inline{font-family:Inter,system-ui,sans-serif;font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;
+      color:var(--muted);border:1px dotted var(--rule);border-radius:3px;padding:0 .3rem;white-space:nowrap;
+      scroll-margin-top:1rem}
 strong{font-weight:600}
 """
 

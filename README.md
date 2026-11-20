@@ -29,6 +29,21 @@ scan for each, served at **https://dogthathunts.github.io/treasury-decisions/**.
    python3 tools/build_index.py           # writes tds.json and index.html
    ```
 
+**Paragraphs (2026-11-20).** Eleven TDs carry `"layout": True`: 1953, 2013, 2090, 2109, 2190, 2313, 4704, 4707,
+6500, 8734 and 8881. For these, `tools/td_reflow.py` rebuilds paragraphs from the page layout instead of keeping
+every printed line break:
+
+- **How a line is read:** a line that ran to the right margin joins the next one, an indent starts a paragraph,
+  and letterheads, signatures and lists keep their lines.
+- **6500** is read one column at a time.
+- **Printed page numbers** move into the page markers (`page 2 · printed p. 119`). Running heads, the scan
+  watermark and printer's codes are dropped, and each drop is listed in the build output.
+- **A check on every build** refuses to write a page unless its words and their order match the plain
+  extraction. Only spacing, line-end hyphens and the listed drops may differ. Short local reorders are allowed but
+  listed, and they are reviewed against the scan.
+- **Two exceptions:** 2090 and 6500 are compared by character totals instead, because their plain extraction
+  is itself out of order. Each exception is noted in `TDS`.
+
 Re-running the generators over every TD reproduces the committed pages. That was checked on 2026-11-19: 16
 pages came out byte-identical, and T.D. 2090 changed because its earlier page was out of date.
 

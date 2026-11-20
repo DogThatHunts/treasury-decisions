@@ -25,6 +25,7 @@ import tempfile
 from urllib.parse import quote
 
 from td_relations import load_relations, VERB_LABEL
+import td_reflow
 
 RELATIONS = load_relations()
 
@@ -39,7 +40,7 @@ TD_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 # .txt keep their intentional line breaks (no "ocr").
 TDS = [
     {"num": "1928", "folder": "1928", "method": "text", "slice": True, "ocr": True},
-    {"num": "2313", "folder": "2313", "method": "text", "slice": True},
+    {"num": "2313", "folder": "2313", "method": "text", "layout": True, "slice": True},
     {"num": "2382", "folder": "2382", "method": "ocr",  "slice": True, "ocr": True},
     {"num": "2401", "folder": "2401", "method": "text", "slice": True, "ocr": True},
     # 2402 shares the combined "TD 2401, TD 2402.pdf"; the dup folder was removed,
@@ -51,8 +52,8 @@ TDS = [
              "is sliced to the T.D. 2815 section. (The earlier 'may actually be 2816' "
              "caveat is resolved — the scan's own header reads (T.D. 2815.).)"},
     {"num": "2988", "folder": "2988", "method": "text", "slice": True, "ocr": True},
-    {"num": "6500", "folder": "6500", "method": "text", "slice": False},
-    {"num": "8734", "folder": "8734", "method": "irs-txt", "slice": False,
+    {"num": "6500", "folder": "6500", "method": "text", "layout": True, "columns": 2, "slice": False},
+    {"num": "8734", "folder": "8734", "method": "irs-txt", "layout": True, "slice": False,
      "ext_txt": "https://www.irs.gov/pub/irs-regs/td8734.txt"},
     # PDF removed 2026-11-16: the file that had been sitting in td_8881/ was a
     # mismatched 2001 Federal Register aviation-safety rule (aircraft oxygen
@@ -67,7 +68,7 @@ TDS = [
     # actually need. Official Federal Register landing page (65 FR 32152):
     # federalregister.gov/documents/2000/05/22/00-11937/revisions-to-regulations-
     # relating-to-withholding-of-tax-on-certain-us-source-income-paid-to-foreign
-    {"num": "8881", "folder": "8881", "method": "text", "slice": False,
+    {"num": "8881", "folder": "8881", "method": "text", "layout": True, "slice": False,
      "ext_ref": ("Federal Register (65 FR 32152)",
                  "https://www.federalregister.gov/documents/2000/05/22/00-11937/"
                  "revisions-to-regulations-relating-to-withholding-of-tax-on-"
@@ -79,13 +80,16 @@ TDS = [
     # volume, so (except 4704/4707, a different, modern bulletin format the
     # "(T. D. NNNN.)" header regex doesn't match) slice=True drops the tail-end
     # of the preceding decision that scan pagination left at the top of page 1.
-    {"num": "1953", "folder": "1953", "method": "text", "slice": True,
+    {"num": "1953", "folder": "1953", "method": "text", "layout": True, "slice": True,
      "ext_ref": ("HathiTrust (Vol. 16, seq 46)",
                  "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=46")},
-    {"num": "2013", "folder": "2013", "method": "text", "slice": True,
+    {"num": "2013", "folder": "2013", "method": "text", "layout": True, "slice": True,
      "ext_ref": ("HathiTrust (Vol. 16, seq 130)",
                  "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=130")},
-    {"num": "2090", "folder": "2090", "method": "text", "slice": False,
+    # guard "multiset": this scan's OCR layer interleaves fragments of neighbouring lines, so the legacy
+    # -layout text is itself out of order in places ("deduc- / of / tions tothe payer of"); the layout reflow
+    # reads them in place, so only the character totals can be compared. Checked against the scan by eye.
+    {"num": "2090", "folder": "2090", "method": "text", "layout": True, "slice": False, "guard": "multiset",
      "note": "24-page A-Z digest (full synopsis of 1913-income-tax rulings), "
              "not a single short decision like the others here. slice=False "
              "deliberately: the digest's own body is full of internal "
@@ -101,10 +105,13 @@ TDS = [
              "and merged back in.",
      "ext_ref": ("HathiTrust (Vol. 16, seq 271)",
                  "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=271")},
-    {"num": "2109", "folder": "2109", "method": "text", "slice": True,
+    # guard_allow: the subject heading "Income tax" is printed below the "(T. D. 2109.)" header on the scan
+    # (y 420 vs 401), but -layout set it on the line above, so the legacy slice cut it off. Restored 2026-11-20.
+    {"num": "2109", "folder": "2109", "method": "text", "layout": True, "slice": True,
+     "guard_allow": ["Income tax"],
      "ext_ref": ("HathiTrust (Vol. 16, seq 317)",
                  "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=317")},
-    {"num": "2190", "folder": "2190", "method": "text", "slice": True,
+    {"num": "2190", "folder": "2190", "method": "text", "layout": True, "slice": True,
      "ext_ref": ("HathiTrust (Vol. 17, seq 490)",
                  "https://babel.hathitrust.org/cgi/pt?id=uc1.a0001809318&seq=490")},
     # T.D. 4704/4707: modern-format 1936 Internal Revenue Bulletin, headed
@@ -114,13 +121,13 @@ TDS = [
     # very top (clearly set off by a rule and the old item's own citation, not
     # confusable with the decision itself -- same "faithful, not rewritten"
     # tolerance as td_2815's noted scan-mate content).
-    {"num": "4704", "folder": "4704", "method": "text", "slice": False,
+    {"num": "4704", "folder": "4704", "method": "text", "layout": True, "slice": False,
      "note": "Identification of taxpayers under Title VIII of the Social "
              "Security Act -- the real source of row 1253's SS-5 quote, "
              "hand-corrected 2026-11-16 from a misattribution to T.D. 4707.",
      "ext_ref": ("HathiTrust (Internal Revenue Bulletin 1936, seq 1640)",
                  "https://babel.hathitrust.org/cgi/pt?id=uiug.30112102075568&seq=1640")},
-    {"num": "4707", "folder": "4707", "method": "text", "slice": False,
+    {"num": "4707", "folder": "4707", "method": "text", "layout": True, "slice": False,
      "note": "Liquor Tax Administration Act -- warehouse ventilation. Real "
              "and verified, but not actually cited anywhere in the Dave "
              "Champion corpus; row 1253's citation moved to T.D. 4704 "
@@ -195,6 +202,17 @@ def extract_pages(spec, pdf):
     raise ValueError(spec["method"])
 
 
+def norm_line(ln):
+    """Per-line normalisation shared by the legacy cleanup and the layout reflow."""
+    ln = re.sub(r"[ \t]+", " ", ln).strip()
+    # normalise the citation token: "T. D." / "T, D." -> "T.D."
+    ln = re.sub(r"\bT\s*[.,]\s*D\s*\.", "T.D.", ln)
+    # drop spaces before closing punctuation and after opening bracket
+    ln = re.sub(r"\s+([,.;:!?%)\]])", r"\1", ln)
+    ln = re.sub(r"([(\[])\s+", r"\1", ln)
+    return ln
+
+
 def clean(text, reflow=False):
     """Light, deterministic OCR/layout cleanup — faithful, no rewriting.
 
@@ -211,15 +229,7 @@ def clean(text, reflow=False):
     else:
         # non-reflowed (born-digital / .txt): keep line breaks; conservative join.
         text = re.sub(r"(\w)-\n(\w)", r"\1\2", text)
-    lines = []
-    for ln in text.split("\n"):
-        ln = re.sub(r"[ \t]+", " ", ln).strip()
-        # normalise the citation token: "T. D." / "T, D." -> "T.D."
-        ln = re.sub(r"\bT\s*[.,]\s*D\s*\.", "T.D.", ln)
-        # drop spaces before closing punctuation and after opening bracket
-        ln = re.sub(r"\s+([,.;:!?%)\]])", r"\1", ln)
-        ln = re.sub(r"([(\[])\s+", r"\1", ln)
-        lines.append(ln)
+    lines = [norm_line(ln) for ln in text.split("\n")]
     out = "\n".join(lines)
     out = re.sub(r"\n{3,}", "\n\n", out).strip()
     if reflow:
@@ -250,6 +260,9 @@ def build(spec):
         return
     os.makedirs(os.path.join(TD_DIR, spec["folder"]), exist_ok=True)
     pages = extract_pages(spec, pdf)
+    if spec["method"] == "irs-txt" or spec.get("_source_used", "").startswith("IRS"):
+        # the IRS file is CP437-era text: byte 0x15 is its section sign (CP437 glyph), shown as nothing before
+        pages = [p.replace("\x15", "§") for p in pages]
     cleaned = [clean(p, reflow=spec.get("ocr", False)) for p in pages]
 
     # Assemble body with page anchors; slice afterwards so anchors survive.
@@ -259,6 +272,39 @@ def build(spec):
     sliced = False
     if spec.get("slice"):
         body, sliced = slice_to_target(body, spec["num"])
+
+    dropped = []
+    if spec.get("layout"):
+        # 2026-11-20: paragraphs rebuilt from the page layout (tools/td_reflow.py); the legacy body above is
+        # kept only as the guard's baseline.
+        legacy = body
+        txt = spec.get("_source_used", "").startswith("IRS")
+        lp = td_reflow.txt_pages(pages[0]) if txt else td_reflow.pdf_pages(pdf, spec.get("columns", 1))
+        for pg in lp:
+            for ln in pg.lines:
+                ln.text = norm_line(ln.text)
+        td_reflow.strip_furniture(lp, pdf=not txt)
+        for pg in lp:
+            dropped += pg.dropped
+        full = td_reflow.reflow_document(lp, txt)
+        body, sliced = (slice_to_target(full, spec["num"]) if spec.get("slice") else (full, False))
+        if sliced and not body.startswith("<!-- page:"):
+            # the slice cut off its own page marker: put back the marker of the page it starts on
+            start = full.find(body[:200])
+            prior = list(re.finditer(r"<!--\s*page:[^>]*-->", full[:start]))
+            if prior:
+                body = prior[-1].group(0) + "\n\n" + body
+        if sliced:   # dropped furniture outside the slice is not the guard's business
+            dropped = [d for d in dropped if d[1] in legacy]
+        ok, msg = td_reflow.guard(legacy, body, dropped,
+                                  multiset=spec.get("columns", 1) > 1 or spec.get("guard") == "multiset",
+                                  allow=spec.get("guard_allow", ()))
+        print(f"    guard: {msg}")
+        for why, t in dropped:
+            print(f"    dropped ({why}): {t}")
+        if not ok:
+            print(f"  ✗ {spec['folder']}: guard FAILED, nothing written")
+            return
 
     # Link back to the source document(s): the local scan/PDF + external reference.
     out_dir = os.path.join(TD_DIR, spec["folder"])
@@ -279,6 +325,11 @@ def build(spec):
     src = spec.get("_source_used", "local PDF")
     header.append(f"> **Extraction:** {src}. Light deterministic cleanup; "
                   "faithful transcription (original spelling/OCR quirks preserved).")
+    if spec.get("layout"):
+        header.append(">")
+        header.append("> **Layout:** paragraphs rebuilt from the page layout (the words and their order are "
+                      "unchanged, checked on every build); printed page numbers are kept in the page markers; "
+                      "running heads and scan marks are left out.")
     if sliced:
         header.append(">")
         header.append(f"> **Note:** extracted from a multi-decision bulletin scan; "
